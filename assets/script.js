@@ -44,14 +44,17 @@ function generatePassword()
     isSpecialChar = confirm("Do you want to include Special Characters in your password?");
 
     
-    // Password generators
+    // Conditions for user choice options
+    // Condition for when user does not select a criteria.
 
     if(!isUpperCase && !isLowerCase && !isSpecialChar && !isNumber){
         choices = alert("You must choose a criteria!");
     }
+    // Condition for when user selects all criteria.
     else if (isUpperCase && isLowerCase && isSpecialChar && isNumber){
         choices = number.concat(upper,lower,symbol);
     }
+    // Conditions for when user selects 3 criteria.
     else if (isUpperCase && isLowerCase && isSpecialChar){
         choices = upper.concat(lower,symbol);
     }
@@ -64,6 +67,7 @@ function generatePassword()
     else if(isSpecialChar && isLowerCase && isNumber){
         choices = symbol.concat(lower,number);
     }
+    // Conditions for when user selects 2 criteria.
     else if(isSpecialChar && isNumber){
         choices = symbol.concat(number);
     }
@@ -82,6 +86,7 @@ function generatePassword()
     else if(isNumber && isUpperCase){
         choices = number.concat(upper);
     }
+    // Conditions for when user selects 1 criteria.
     else if (isNumber){
         choices = number;
     }
@@ -94,34 +99,27 @@ function generatePassword()
     else if (isSpecialChar){
         choices = symbol;
     }
-
+    // A variable that is an array, storing the user's criteria choice.
     var randomPass = [];
     
-
-    for(i = 0; i <= enter; i++){
+    // Randomly chooses characters based on the user's desired password length and selected criteria.
+    for(i = 1; i <= enter; i++){
         var userChoices = choices [Math.floor(Math.random() * choices.length)];
         randomPass.push(userChoices);
         
     }
-
+    // Removes the commas from the outputted password.
     var password = randomPass.join("");
-    writePassword(password);
     return password;
 
-
-
-    
 }
 
 
 
-
-
-
-// Write password to the #password input
+// Writes password to the #password input
 function writePassword() {
-  var password = generatePassword(); //Generate password is not a function.
-  var passwordText = document.querySelector("#password") = password; //#password refers to the card created within the HTML. Stores the generated password.
+  var password = generatePassword(); // Generate password is now a function, and is able to be called.
+  var passwordText = document.querySelector("#password") ; //#password is the id of the card in the HTML - this stores the generated password.
   
   
 

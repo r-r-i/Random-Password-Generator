@@ -1,5 +1,9 @@
 # JavaScript : Password Generator
 
+## Task
+
+For this challenge, I was given the task of modifying starter code that would create an application that generates a random password based on the user's selected criteria. This application runs in the browser, and features dynamically updated HTML and CSS powered by the JavaScript code I wrote. The application displays a clean and polished response UI that adapts to multiple screen sizes.
+
 ## Acceptance Criteria
 
 ```

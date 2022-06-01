@@ -28,4 +28,4 @@ THEN the password is either displayed in an alert or written to the page
 
 Github Repo URL: https://github.com/r-r-i/Random-Password-Generator Deployed URL: https://r-r-i.github.io/Random-Password-Generator/
 
-![random password generator home screen](RPG.jpeg)
+![random password generator home screen](assets/images/RPG.png)
